@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+
+import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
+import { router } from './router/router'
+import { Suspense } from 'react'
 import './App.css';
 
-function App() {
+const App = () => {
+  let routes = useRoutes([
+    ...router
+  ]);
+  return routes;
+};
+const AppWrpper = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Suspense>
+        <App />
+      </Suspense>
+    </Router>
   );
 }
 
-export default App;
+export default AppWrpper;
+
