@@ -71,4 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## TodoList
 1. 设置一个公共的Layout给react，在Layout中加上Header和边栏
+2. 配置less
 2. 研究下build，以及怎么部署到服务器上，看看是不是可以用git的流水线
